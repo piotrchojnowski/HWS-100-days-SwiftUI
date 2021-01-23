@@ -2,5 +2,6 @@
 my implementations of Paul's course https://www.hackingwithswift.com/100/swiftui
 
 
-# we-split - Project 1
-[*] HWS example SwiftUI project 1
+Projects implemented:
+ - # we-split - Project 1
+[x] HWS example SwiftUI project 1
