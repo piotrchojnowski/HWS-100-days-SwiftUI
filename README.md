@@ -4,4 +4,3 @@ my implementations of Paul's course https://www.hackingwithswift.com/100/swiftui
 
 Projects implemented:
  - [x] # we-split - Project 1
- HWS example SwiftUI project 1
