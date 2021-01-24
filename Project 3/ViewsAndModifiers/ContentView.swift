@@ -70,7 +70,7 @@ struct EnvRegModifiersContentView: View {
     }
 }
 
-struct ContentView: View {
+struct PropertiesContentView: View {
     /// as a computed property as well
     var motto1: some View {
         Text("Draco dormiens")
@@ -83,6 +83,28 @@ struct ContentView: View {
             motto1
                 .foregroundColor(.green)
             motto2
+        }
+    }
+}
+
+struct CapsuleText: View {
+    var text: String
+    
+    var body: some View {
+        Text(text)
+            .font(.largeTitle)
+            .padding()
+            .background(Color.blue)
+            .clipShape(Capsule())
+    }
+}
+
+struct ContentView: View {
+    var body: some View {
+        VStack(spacing: 10) {
+            CapsuleText(text: "First")
+                .foregroundColor(.yellow)
+            CapsuleText(text: "Second")
         }
     }
 }
