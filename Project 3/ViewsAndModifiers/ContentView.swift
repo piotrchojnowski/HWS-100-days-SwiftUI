@@ -40,7 +40,7 @@ struct ModifiersContentView: View {
     }
 }
 
-struct ContentView: View {
+struct ConditionalModifiersContentView: View {
     
     @State private var useRedText = false
     
@@ -49,6 +49,32 @@ struct ContentView: View {
             self.useRedText.toggle()
         }
         .foregroundColor(useRedText ? .red : .blue)
+    }
+}
+
+struct EnvRegModifiersContentView: View {
+    
+    @State private var useRedText = false
+    
+    var body: some View {
+        VStack {
+            Text("Gryffindor")
+                .font(.largeTitle)
+            Text("Hufflepuff")
+            Text("Ravenclaw")
+            Text("Slytherin")
+        }
+        .font(.title) // environment modifier kind
+        .blur(radius: 10) // local modifier kind
+    }
+}
+
+struct ContentView: View {
+    
+    @State private var useRedText = false
+    
+    var body: some View {
+        Text("Hello you there!")
     }
 }
 
