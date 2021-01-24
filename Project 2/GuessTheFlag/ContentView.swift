@@ -119,10 +119,36 @@ struct AlertContentView: View {
 }
 
 struct ContentView: View {
-    @State private var isAlertPresented = false
+    var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"]
+    var correctAnswer = Int.random(in: 0...2)
     
     var body: some View {
-        Text("Hello")
+        ZStack() {
+            Color.secondary.edgesIgnoringSafeArea(.all)
+            
+            VStack(spacing: 30) {
+                VStack() {
+                    Text("Select flag of a country:")
+                        .foregroundColor(.white)
+                    Text(countries[correctAnswer])
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.yellow)
+                }
+                
+                ForEach(0 ..< 3) { number in
+                    Button(action: {
+                        print("Button tapped")
+                    }) {
+                        Image(self.countries[number])
+                            .renderingMode(.original)
+                    }
+                }
+                
+                Spacer()
+            }
+        }
+        
     }
 }
 
