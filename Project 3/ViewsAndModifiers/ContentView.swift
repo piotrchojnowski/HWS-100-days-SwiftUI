@@ -9,13 +9,34 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Welcome")
-            .font(.title)
-            .fontWeight(.bold)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.orange)
-            .foregroundColor(.white)
-            .edgesIgnoringSafeArea(.all)
+        
+        VStack() {
+            Text("Welcome")
+                .font(.title)
+                .fontWeight(.bold)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color.orange)
+                .foregroundColor(.white)
+                .edgesIgnoringSafeArea(.all)
+            
+            Button("Hello World") {
+                print(type(of: self.body))
+            }
+            .frame(width: 200, height: 200) // order of modifier is relevant: https://www.hackingwithswift.com/books/ios-swiftui/why-modifier-order-matters
+            .background(Color.red)
+            
+            // example of taking advantage of view modifiers:
+            Text("Hello World")
+                .padding()
+                .background(Color.red)
+                .padding()
+                .background(Color.blue)
+                .padding()
+                .background(Color.green)
+                .padding()
+                .background(Color.yellow)
+        }
+        
     }
 }
 
