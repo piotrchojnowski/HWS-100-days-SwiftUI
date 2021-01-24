@@ -52,6 +52,7 @@ struct ConditionalModifiersContentView: View {
     }
 }
 
+/// https://www.hackingwithswift.com/books/ios-swiftui/environment-modifiers
 struct EnvRegModifiersContentView: View {
     
     @State private var useRedText = false
