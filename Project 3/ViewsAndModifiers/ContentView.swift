@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ModifiersContentView: View {
     var body: some View {
         
         VStack() {
@@ -37,6 +37,18 @@ struct ContentView: View {
                 .background(Color.yellow)
         }
         
+    }
+}
+
+struct ContentView: View {
+    
+    @State private var useRedText = false
+    
+    var body: some View {
+        Button("Hello you!") {
+            self.useRedText.toggle()
+        }
+        .foregroundColor(useRedText ? .red : .blue)
     }
 }
 
