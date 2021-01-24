@@ -71,11 +71,19 @@ struct EnvRegModifiersContentView: View {
 }
 
 struct ContentView: View {
+    /// as a computed property as well
+    var motto1: some View {
+        Text("Draco dormiens")
+    }
     
-    @State private var useRedText = false
-    
+    let motto2 = Text("nunquam titillandus")
+
     var body: some View {
-        Text("Hello you there!")
+        VStack {
+            motto1
+                .foregroundColor(.green)
+            motto2
+        }
     }
 }
 
