@@ -124,12 +124,23 @@ struct ContentView: View {
     
     @State private var showingScore = false
     @State private var scoreTitle = ""
+    @State private var scoreMessage = ""
+    @State private var scoreTotal = 0
     
     func flagTapped(_ number: Int) {
         if number == correctAnswer {
+            scoreTotal += 10
             scoreTitle = "Correct"
+            scoreMessage = "Your score is \(scoreTotal)"
+            
         } else {
             scoreTitle = "Wrong"
+            scoreMessage = "That's a flag of \(countries[number])!"
+            scoreTotal -= 5
+            
+            if scoreTotal < 0 {
+                scoreTotal = 0
+            }
         }
         
         showingScore = true
@@ -160,16 +171,23 @@ struct ContentView: View {
                     }) {
                         Image(self.countries[number])
                             .renderingMode(.original)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                            .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.white, lineWidth: 4))
                     }
                     .shadow(radius: 8)
                 }
                 
                 Spacer()
+                
+                Text("Your score is: \(scoreTotal)")
+                    .fontWeight(.semibold)
+                    .foregroundColor(.white)
+                    .padding()
             }
         }
         .alert(isPresented: $showingScore) {
             Alert(title: Text(scoreTitle),
-                  message: Text("Your score is ..."),
+                  message: Text(scoreMessage),
                   dismissButton:
                     .default(Text("Continue")) {
                         self.askQuestion()
