@@ -1,6 +1,8 @@
-# HWS-100-days-SwiftUI
-my implementations of Paul's course https://www.hackingwithswift.com/100/swiftui
+# guess-the-flag
+HWS example SwiftUI project 2
 
+based on a tutorial:
+https://www.hackingwithswift.com/books/ios-swiftui/guess-the-flag-wrap-up
 
-Projects implemented:
- - [x] # we-split - Project 1
+completed course screenshot:
+![GuessTheFlag](guessTheFlag.png?raw=true "We split HWS tutorial implementation screenshot by Piotr Chojnowski")
