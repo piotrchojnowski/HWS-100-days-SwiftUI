@@ -126,6 +126,21 @@ extension View {
     }
 }
 
+struct LargeTitleBlue: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.largeTitle)
+            .foregroundColor(.blue)
+            .shadow(color: Color.black.opacity(0.6), radius: 2)
+    }
+}
+
+extension View {
+    func largeTitleStyle() -> some View {
+        self.modifier(LargeTitleBlue())
+    }
+}
+
 struct Watermark: ViewModifier {
     var text: String
 
@@ -194,6 +209,7 @@ struct ContentView: View {
 //            VStack {
                 Image(systemName: "\(row * 4 + col).circle")
                 Text("R\(row) C\(col)")
+                    .largeTitleStyle()
 //            }
         }
     }
