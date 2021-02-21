@@ -14,6 +14,7 @@
 		6BC85E7725CA0507002A7D4E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BC85E7625CA0507002A7D4E /* Preview Assets.xcassets */; };
 		6BC85E7A25CA0507002A7D4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BC85E7825CA0507002A7D4E /* LaunchScreen.storyboard */; };
 		6BC85E8425CA1475002A7D4E /* SleepCalculatorModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6BC85E8325CA1475002A7D4E /* SleepCalculatorModel.mlmodel */; };
+		6BD3C8F325E328F80099E21B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6BD3C8F225E328F80099E21B /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		6BC85E7925CA0507002A7D4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BC85E7B25CA0507002A7D4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BC85E8325CA1475002A7D4E /* SleepCalculatorModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SleepCalculatorModel.mlmodel; sourceTree = SOURCE_ROOT; };
+		6BD3C8F225E328F80099E21B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				6BC85E7825CA0507002A7D4E /* LaunchScreen.storyboard */,
 				6BC85E8325CA1475002A7D4E /* SleepCalculatorModel.mlmodel */,
 				6BC85E7B25CA0507002A7D4E /* Info.plist */,
+				6BD3C8F225E328F80099E21B /* README.md */,
 				6BC85E7525CA0507002A7D4E /* Preview Content */,
 			);
 			path = BetterRestHWS;
@@ -137,6 +140,7 @@
 			files = (
 				6BC85E7A25CA0507002A7D4E /* LaunchScreen.storyboard in Resources */,
 				6BC85E7725CA0507002A7D4E /* Preview Assets.xcassets in Resources */,
+				6BD3C8F325E328F80099E21B /* README.md in Resources */,
 				6BC85E7425CA0507002A7D4E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
