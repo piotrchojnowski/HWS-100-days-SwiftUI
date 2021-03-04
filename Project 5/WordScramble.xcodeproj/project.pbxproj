@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B37929125F18B54001DB3C1 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6B37929025F18B54001DB3C1 /* start.txt */; };
 		6BD3C90325E32AC70099E21B /* WordScrambleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD3C90225E32AC70099E21B /* WordScrambleApp.swift */; };
 		6BD3C90525E32AC70099E21B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD3C90425E32AC70099E21B /* ContentView.swift */; };
 		6BD3C90725E32AC90099E21B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BD3C90625E32AC90099E21B /* Assets.xcassets */; };
@@ -14,12 +15,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B37929025F18B54001DB3C1 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 		6BD3C8FF25E32AC70099E21B /* WordScramble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordScramble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BD3C90225E32AC70099E21B /* WordScrambleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordScrambleApp.swift; sourceTree = "<group>"; };
 		6BD3C90425E32AC70099E21B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6BD3C90625E32AC90099E21B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BD3C90925E32AC90099E21B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6BD3C90B25E32AC90099E21B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BDBEC6F25EDA77500D4A6D1 /* WordScramble.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WordScramble.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +55,10 @@
 		6BD3C90125E32AC70099E21B /* WordScramble */ = {
 			isa = PBXGroup;
 			children = (
+				6BDBEC6F25EDA77500D4A6D1 /* WordScramble.entitlements */,
 				6BD3C90225E32AC70099E21B /* WordScrambleApp.swift */,
 				6BD3C90425E32AC70099E21B /* ContentView.swift */,
+				6B37929025F18B54001DB3C1 /* start.txt */,
 				6BD3C90625E32AC90099E21B /* Assets.xcassets */,
 				6BD3C90B25E32AC90099E21B /* Info.plist */,
 				6BD3C90825E32AC90099E21B /* Preview Content */,
@@ -127,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BD3C90A25E32AC90099E21B /* Preview Assets.xcassets in Resources */,
+				6B37929125F18B54001DB3C1 /* start.txt in Resources */,
 				6BD3C90725E32AC90099E21B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +273,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WordScramble/WordScramble.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"WordScramble/Preview Content\"";
 				DEVELOPMENT_TEAM = 5XPP9GGY9N;
@@ -279,8 +286,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.octotap.WordScramble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
@@ -289,6 +297,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WordScramble/WordScramble.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"WordScramble/Preview Content\"";
 				DEVELOPMENT_TEAM = 5XPP9GGY9N;
@@ -301,8 +310,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.octotap.WordScramble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Release;
 		};
