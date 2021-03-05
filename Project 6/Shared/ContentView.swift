@@ -8,9 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var animationAmount: CGFloat = 1
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Button("Hello") {
+            animationAmount += 1
+        }
+        .padding(50)
+        .background(Color.blue)
+        .foregroundColor(.white)
+        .clipShape(Circle())
+        .scaleEffect(animationAmount)
+        .blur(radius: (animationAmount - 1) * 2)
+        .animation(.easeOut)
     }
 }
 
