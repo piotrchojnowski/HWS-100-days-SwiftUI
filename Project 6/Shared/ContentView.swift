@@ -12,15 +12,27 @@ struct ContentView: View {
     
     var body: some View {
         Button("Hello") {
-            animationAmount += 1
+//            animationAmount += 1
         }
         .padding(50)
         .background(Color.blue)
         .foregroundColor(.white)
         .clipShape(Circle())
-        .scaleEffect(animationAmount)
-        .blur(radius: (animationAmount - 1) * 2)
-        .animation(.easeOut)
+        .overlay(
+            Circle()
+                .stroke(Color.black, lineWidth: 1)
+                .scaleEffect(animationAmount)
+                .opacity(Double(2 - animationAmount))
+                .animation(
+                    Animation.easeIn(duration: 0.8)
+                        .repeatForever(autoreverses: false)
+                )
+        )
+//        .scaleEffect(animationAmount)
+//        .blur(radius: (animationAmount - 1) * 2)
+        .onAppear {
+            self.animationAmount = 2
+        }
     }
 }
 
