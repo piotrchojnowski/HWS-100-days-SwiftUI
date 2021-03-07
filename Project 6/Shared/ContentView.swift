@@ -119,7 +119,7 @@ struct AnimatingGesturesContentView: View {
     }
 }
 
-struct ContentView: View {
+struct SnakeAnimationContentView: View {
     let letters = Array("Hello GAYS!")
        @State private var enabled = false
        @State private var dragAmount = CGSize.zero
@@ -145,6 +145,27 @@ struct ContentView: View {
            )
        }
    }
+
+struct ContentView: View {
+    @State private var isShowingRed = false
+    
+    var body: some View {
+        VStack {
+            Button("Tap Me") {
+                withAnimation {
+                    self.isShowingRed.toggle()
+                }
+            }
+
+            if isShowingRed {
+                Rectangle()
+                    .fill(Color.red)
+                    .frame(width: 200, height: 200)
+                    .transition(.asymmetric(insertion: .move(edge: .bottom), removal: .opacity))
+            }
+        }
+    }
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
