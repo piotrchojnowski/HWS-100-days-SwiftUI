@@ -174,7 +174,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Button("Tap Me") {
-                withAnimation {
+                withAnimation(.interpolatingSpring(stiffness: 16, damping: 2)) {
                     self.isShowingRed.toggle()
                 }
             }
