@@ -85,7 +85,7 @@ struct ExplicitAnimationsContentView: View {
     }
 }
 
-struct ContentView: View {
+struct CombinedAnimationsContentView: View {
     @State private var enabled = false
     
     var body: some View {
@@ -101,6 +101,50 @@ struct ContentView: View {
         .animation(.interpolatingSpring(stiffness: 10, damping: 1))
     }
 }
+
+struct AnimatingGesturesContentView: View {
+    @State private var dragAmount = CGSize.zero
+    
+    var body: some View {
+        
+        LinearGradient(gradient: Gradient(colors: [Color.yellow, Color.red]), startPoint: .top, endPoint: .bottom)
+            .frame(width: 280, height: 200, alignment: .center)
+            .clipShape(RoundedRectangle(cornerRadius: 16))
+            .offset(dragAmount)
+            .gesture(
+                DragGesture()
+                    .onChanged { self.dragAmount = $0.translation }
+                    .onEnded { _ in self.dragAmount = .zero }
+            )
+    }
+}
+
+struct ContentView: View {
+    let letters = Array("Hello GAYS!")
+       @State private var enabled = false
+       @State private var dragAmount = CGSize.zero
+
+       var body: some View {
+           HStack(spacing: 0) {
+               ForEach(0..<letters.count) { num in
+                   Text(String(self.letters[num]))
+                       .padding(6)
+                       .font(.title)
+                       .background(self.enabled ? Color.red : Color.blue)
+                       .offset(self.dragAmount)
+                       .animation(Animation.default.delay(Double(num) / 10))
+               }
+           }
+           .gesture(
+               DragGesture()
+                   .onChanged { self.dragAmount = $0.translation }
+                   .onEnded { _ in
+                       self.dragAmount = .zero
+                       self.enabled.toggle()
+                   }
+           )
+       }
+   }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
