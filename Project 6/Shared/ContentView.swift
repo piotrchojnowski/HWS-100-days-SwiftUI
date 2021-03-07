@@ -35,8 +35,7 @@ struct FirstAnimationContentView: View {
         }
     }
 }
-
-struct ContentView: View {
+struct AnimationsContentView: View {
     @State private var animationAmount: CGFloat = 1
     
     var body: some View {
@@ -61,6 +60,27 @@ struct ContentView: View {
             .clipShape(Circle())
             .scaleEffect(animationAmount)
         }
+        
+    }
+}
+
+struct ContentView: View {
+    @State private var animationAmount = 0.0
+    
+    var body: some View {
+        
+        Button("Hello") {
+            withAnimation(.interpolatingSpring(stiffness: 10, damping: 2)) {
+                animationAmount += 360
+            }
+        }
+        .padding(40)
+        .foregroundColor(.white)
+        .background(Color.blue)
+        .clipShape(Circle())
+        .rotation3DEffect(
+            .degrees(animationAmount),
+            axis: (x: 0.0, y: 1.0, z: 0.0))
         
     }
 }
