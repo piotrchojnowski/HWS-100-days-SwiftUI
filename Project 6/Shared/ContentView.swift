@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct FirstAnimationContentView: View {
     @State private var animationAmount: CGFloat = 1
     
     var body: some View {
@@ -33,6 +33,35 @@ struct ContentView: View {
         .onAppear {
             self.animationAmount = 2
         }
+    }
+}
+
+struct ContentView: View {
+    @State private var animationAmount: CGFloat = 1
+    
+    var body: some View {
+        
+        VStack {
+            Stepper("animation value",
+                    value: $animationAmount.animation(
+                        Animation
+                            .easeOut(duration: 1)
+                            .repeatCount(3, autoreverses: true)
+                    ),
+                    in: 1...10)
+            
+            Spacer()
+            
+            Button("Hello") {
+                animationAmount += 1
+            }
+            .padding(40)
+            .foregroundColor(.white)
+            .background(Color.blue)
+            .clipShape(Circle())
+            .scaleEffect(animationAmount)
+        }
+        
     }
 }
 
