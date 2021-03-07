@@ -64,7 +64,7 @@ struct AnimationsContentView: View {
     }
 }
 
-struct ContentView: View {
+struct ExplicitAnimationsContentView: View {
     @State private var animationAmount = 0.0
     
     var body: some View {
@@ -82,6 +82,23 @@ struct ContentView: View {
             .degrees(animationAmount),
             axis: (x: 0.0, y: 1.0, z: 0.0))
         
+    }
+}
+
+struct ContentView: View {
+    @State private var enabled = false
+    
+    var body: some View {
+        
+        Button("Tap Me") {
+            self.enabled.toggle()
+        }
+        .frame(width: 200, height: 200)
+        .background(enabled ? Color.blue : Color.yellow)
+        .foregroundColor(.white)
+        .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
+        .clipShape(RoundedRectangle(cornerRadius: enabled ? 60 : 0))
+        .animation(.interpolatingSpring(stiffness: 10, damping: 1))
     }
 }
 
