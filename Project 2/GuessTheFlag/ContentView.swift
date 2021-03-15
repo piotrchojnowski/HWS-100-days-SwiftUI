@@ -137,6 +137,7 @@ struct ContentView: View {
     @State private var scoreTitle = ""
     @State private var scoreMessage = ""
     @State private var scoreTotal = 0
+    @State private var rotationAngle = Double(0)
     
     func flagTapped(_ number: Int) {
         if number == correctAnswer {
@@ -160,6 +161,23 @@ struct ContentView: View {
     func askQuestion() {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
+        rotationAngle = 0
+    }
+    
+    private func isCorrectFlag(number: Int) -> Bool {
+        return number == correctAnswer
+    }
+    
+    private func buttonSelected(number: Int) {
+        flagTapped(number)
+        
+        guard isCorrectFlag(number: number) else {
+            return
+        }
+        
+        withAnimation(.interpolatingSpring(stiffness: 10, damping: 2)) {
+            rotationAngle += 360
+        }
     }
     
     var body: some View {
@@ -178,11 +196,30 @@ struct ContentView: View {
                 
                 ForEach(0 ..< 3) { number in
                     Button(action: {
+                        
                         flagTapped(number)
+                        
+                        guard isCorrectFlag(number: number) else {
+                            return
+                        }
+                        
+                        withAnimation(
+                            Animation.interpolatingSpring(stiffness: 10, damping: 2)
+                                .repeatForever()) {
+                            rotationAngle += 360
+                        }
+                        
                     }) {
                         FlagImage(imageName: self.countries[number])
                     }
                     .shadow(radius: 8)
+                    .rotation3DEffect(
+                        .degrees(rotationAngle),
+                        axis: (x: 0.0, y: isCorrectFlag(number: number) ? 1.0 : 0.0, z: 0.0),
+                        anchor: .center,
+                        anchorZ: 0.0,
+                        perspective: 1.0
+                    )
                 }
                 
                 Spacer()
