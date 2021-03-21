@@ -58,7 +58,7 @@ struct SheetPresentingContentView: View {
     }
 }
 
-struct ContentView: View {
+struct DeletingItemsContentView: View {
     
     @State private var numbers = [Int]()
     @State private var currentNumber = 1
@@ -84,6 +84,25 @@ struct ContentView: View {
     
     private func removeItem(atOffsets offsets: IndexSet) {
         numbers.remove(atOffsets: offsets)
+    }
+}
+
+
+struct UserDefaultsContentView: View {
+    private static let tapsKey = "Taps"
+    @State private var tapCount: Int = UserDefaults.standard.integer(forKey: tapsKey)
+    
+    var body: some View {
+        Button("Tap count: \(tapCount)") {
+            self.tapCount += 1
+            UserDefaults.standard.setValue(tapCount, forKey: UserDefaultsContentView.tapsKey)
+        }
+    }
+}
+
+struct ContentView: View {
+    var body: some View {
+        Text("Hello")
     }
 }
 
