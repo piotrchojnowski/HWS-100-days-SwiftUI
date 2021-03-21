@@ -11,6 +11,7 @@
 		6B3792CE26002750001DB3C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3792CD26002750001DB3C1 /* ContentView.swift */; };
 		6B3792D026002751001DB3C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B3792CF26002751001DB3C1 /* Assets.xcassets */; };
 		6B3792D326002751001DB3C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B3792D226002751001DB3C1 /* Preview Assets.xcassets */; };
+		6B3792DD2607ED73001DB3C1 /* PlaygroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3792DC2607ED73001DB3C1 /* PlaygroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		6B3792CF26002751001DB3C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B3792D226002751001DB3C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6B3792D426002751001DB3C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B3792DC2607ED73001DB3C1 /* PlaygroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				6B3792CB26002750001DB3C1 /* iExpensesApp.swift */,
 				6B3792CD26002750001DB3C1 /* ContentView.swift */,
+				6B3792DC2607ED73001DB3C1 /* PlaygroundView.swift */,
 				6B3792CF26002751001DB3C1 /* Assets.xcassets */,
 				6B3792D426002751001DB3C1 /* Info.plist */,
 				6B3792D126002751001DB3C1 /* Preview Content */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B3792CE26002750001DB3C1 /* ContentView.swift in Sources */,
+				6B3792DD2607ED73001DB3C1 /* PlaygroundView.swift in Sources */,
 				6B3792CC26002750001DB3C1 /* iExpensesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
