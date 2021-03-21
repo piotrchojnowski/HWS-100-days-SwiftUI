@@ -100,9 +100,46 @@ struct UserDefaultsContentView: View {
     }
 }
 
+struct UserData: Codable {
+    var firstName: String
+    var lastName: String
+}
+
 struct ContentView: View {
+    
+    @State private var user = UserData(firstName: "Taylor", lastName: "Swift")
+    @State private var userToDisplay: UserData? = nil
+        
     var body: some View {
-        Text("Hello")
+        VStack {
+            Button("Encode") {
+                let encoder = JSONEncoder()
+                
+                guard let data = try? encoder.encode(self.user) else {
+                    return
+                }
+                
+                UserDefaults.standard.setValue(data, forKey: "UserData")
+            }
+            
+            Button("Decode") {
+                
+                guard let savedUserData = UserDefaults.standard.value(forKey: "UserData") as? Data else {
+                    return
+                }
+                
+                let decoder = JSONDecoder()
+                
+                guard let user = try? decoder.decode(UserData.self, from: savedUserData) else {
+                    return
+                }
+                
+                self.userToDisplay = user
+            }
+            
+            Text("User: \(userToDisplay?.firstName ?? ""), \(userToDisplay?.lastName ?? "")")
+        }
+
     }
 }
 
