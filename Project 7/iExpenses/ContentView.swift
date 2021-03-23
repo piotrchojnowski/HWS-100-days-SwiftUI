@@ -8,9 +8,22 @@
 import SwiftUI
 
 struct ExpenseItem: Identifiable {
-    enum ExpenseType {
-        case `private`
+    enum ExpenseType: CaseIterable, Identifiable {
+        case personal
         case business
+        
+        var description: String {
+            switch self {
+            case .personal:
+                return "Personal"
+            case .business:
+                return "Business"
+            }
+        }
+        
+        var id: String {
+            return description
+        }
     }
     
     let id = UUID()
@@ -25,6 +38,7 @@ class Expenses: ObservableObject {
 
 struct ContentView: View {
     @ObservedObject private var expenses = Expenses()
+    @State private var showingAddExpense = false
     
     var body: some View {
         NavigationView {
@@ -37,12 +51,13 @@ struct ContentView: View {
             .navigationBarTitle("My expenses")
             .navigationBarItems(trailing:
                                     Button(action: {
-                                        let expense = ExpenseItem(name: "test", type: .private, amount: 10)
-                                        self.expenses.items.append(expense)
+                                        showingAddExpense = true
                                     }, label: {
-                                        Text("add")
-                                    })
-            )
+                                        Image(systemName: "plus")
+                                    }))
+            .sheet(isPresented: $showingAddExpense) {
+                AddView(expenses: expenses)
+            }
         }
     }
     
