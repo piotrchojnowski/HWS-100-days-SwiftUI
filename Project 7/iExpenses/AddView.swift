@@ -13,7 +13,7 @@ struct AddView: View {
     @State private var name = ""
     @State private var type: ExpenseItem.ExpenseType = .personal
     @State private var amount = ""
-    
+    @State private var showingAlert = false
     static let types = ExpenseItem.ExpenseType.allCases
     
     @Environment(\.presentationMode) var presentationMode
@@ -41,8 +41,13 @@ struct AddView: View {
                     let item = ExpenseItem(name: name, type: type, amount: actualAmount)
                     self.expenses.items.append(item)
                     self.presentationMode.wrappedValue.dismiss()
+                } else {
+                    showingAlert = true
                 }
             })
+            .alert(isPresented: $showingAlert) {
+                Alert(title: Text("Validation"), message: Text("Bad input data."), dismissButton: .default(Text("OK")))
+            }
         }
     }
 }
