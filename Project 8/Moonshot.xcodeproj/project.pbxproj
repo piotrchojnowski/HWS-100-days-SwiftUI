@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6B05A55E26127D1400173F27 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6B05A55D26127D1400173F27 /* README.md */; };
+		6B05A5622613C80500173F27 /* missions.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B05A5602613C80500173F27 /* missions.json */; };
+		6B05A5632613C80500173F27 /* astronauts.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B05A5612613C80500173F27 /* astronauts.json */; };
+		6B05A5672613C85400173F27 /* Astronaut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A5662613C85400173F27 /* Astronaut.swift */; };
+		6B05A56A2613C8C200173F27 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A5692613C8C200173F27 /* Bundle-Decodable.swift */; };
 		6BDBC40926113B4200BC2699 /* MoonshotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDBC40826113B4200BC2699 /* MoonshotApp.swift */; };
 		6BDBC40B26113B4200BC2699 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDBC40A26113B4200BC2699 /* ContentView.swift */; };
 		6BDBC40D26113B4400BC2699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BDBC40C26113B4400BC2699 /* Assets.xcassets */; };
@@ -16,6 +20,10 @@
 
 /* Begin PBXFileReference section */
 		6B05A55D26127D1400173F27 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		6B05A5602613C80500173F27 /* missions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = missions.json; sourceTree = "<group>"; };
+		6B05A5612613C80500173F27 /* astronauts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = astronauts.json; sourceTree = "<group>"; };
+		6B05A5662613C85400173F27 /* Astronaut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronaut.swift; sourceTree = "<group>"; };
+		6B05A5692613C8C200173F27 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		6BDBC40526113B4200BC2699 /* Moonshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moonshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BDBC40826113B4200BC2699 /* MoonshotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotApp.swift; sourceTree = "<group>"; };
 		6BDBC40A26113B4200BC2699 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,7 +64,11 @@
 			children = (
 				6BDBC40826113B4200BC2699 /* MoonshotApp.swift */,
 				6BDBC40A26113B4200BC2699 /* ContentView.swift */,
+				6B05A5662613C85400173F27 /* Astronaut.swift */,
+				6B05A5692613C8C200173F27 /* Bundle-Decodable.swift */,
 				6BDBC40C26113B4400BC2699 /* Assets.xcassets */,
+				6B05A5612613C80500173F27 /* astronauts.json */,
+				6B05A5602613C80500173F27 /* missions.json */,
 				6BDBC41126113B4400BC2699 /* Info.plist */,
 				6B05A55D26127D1400173F27 /* README.md */,
 				6BDBC40E26113B4400BC2699 /* Preview Content */,
@@ -131,6 +143,8 @@
 			files = (
 				6B05A55E26127D1400173F27 /* README.md in Resources */,
 				6BDBC41026113B4400BC2699 /* Preview Assets.xcassets in Resources */,
+				6B05A5622613C80500173F27 /* missions.json in Resources */,
+				6B05A5632613C80500173F27 /* astronauts.json in Resources */,
 				6BDBC40D26113B4400BC2699 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,8 +156,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B05A5672613C85400173F27 /* Astronaut.swift in Sources */,
 				6BDBC40B26113B4200BC2699 /* ContentView.swift in Sources */,
 				6BDBC40926113B4200BC2699 /* MoonshotApp.swift in Sources */,
+				6B05A56A2613C8C200173F27 /* Bundle-Decodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

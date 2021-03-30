@@ -53,7 +53,7 @@ struct ScrollViewContentView: View {
     }
 }
 
-struct ContentView: View {
+struct NavigationLinkContentView: View {
     var body: some View {
         NavigationView {
             List(0..<100) { (row) in
@@ -62,6 +62,18 @@ struct ContentView: View {
                 }
             }
             .navigationBarTitle("NavigationLink + List")
+        }
+    }
+}
+
+struct ContentView: View {
+    
+    let astronauts = Bundle.main.decode("astronauts.json")
+    
+    var body: some View {
+        VStack {
+            Text("Astronauts count: \(astronauts.count)")
+            Text("First entry: \(astronauts.first?.name ?? "uknown")")
         }
     }
 }
