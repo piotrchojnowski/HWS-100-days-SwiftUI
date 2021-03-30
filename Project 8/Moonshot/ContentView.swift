@@ -36,7 +36,7 @@ struct CustomText: View {
     }
 }
 
-struct ContentView: View {
+struct ScrollViewContentView: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
             VStack(spacing: 8) {
@@ -50,6 +50,19 @@ struct ContentView: View {
             .frame(maxWidth: .infinity)
         }
         
+    }
+}
+
+struct ContentView: View {
+    var body: some View {
+        NavigationView {
+            List(0..<100) { (row) in
+                NavigationLink(destination: Text("Detail \(row)")) {
+                    Text("Row \(row)")
+                }
+            }
+            .navigationBarTitle("NavigationLink + List")
+        }
     }
 }
 
