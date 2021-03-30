@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ImageResizableContentView: View {
     var body: some View {
         VStack {
             GeometryReader { geo in
@@ -20,6 +20,36 @@ struct ContentView: View {
                     .shadow(radius: 8)
             }
         }
+    }
+}
+
+struct CustomText: View {
+    var text: String
+    
+    var body: some View {
+        Text(text)
+    }
+    
+    init(_ text: String) {
+        print("CustomText initialized")
+        self.text = text
+    }
+}
+
+struct ContentView: View {
+    var body: some View {
+        ScrollView(.vertical, showsIndicators: true) {
+            VStack(spacing: 8) {
+                // Scrollview will instantiate 100 items at once.
+                // to use lazy loading of cells that are visible use List() { }
+                ForEach(0..<100) {
+                    CustomText("#\($0)")
+                        .font(.title)
+                }
+            }
+            .frame(maxWidth: .infinity)
+        }
+        
     }
 }
 
