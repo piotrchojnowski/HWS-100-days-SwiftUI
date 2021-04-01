@@ -32,27 +32,33 @@ struct MissionView: View {
                         .padding()
                     
                     ForEach(self.astronauts, id: \.role) { crewMember in
-                        HStack {
-                            Image(crewMember.astronaut.id)
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 92, height: 64, alignment: .center)
-                                .clipShape(RoundedRectangle(cornerRadius: 8))
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 8).stroke(Color.secondary, lineWidth: 1))
+                        NavigationLink(destination:
+                                        AstronautView(astronaut: crewMember.astronaut)) {
                             
-                            VStack(alignment: .leading) {
-                                Text(crewMember.astronaut.name)
-                                    .font(.headline)
+                            HStack {
+                                Image(crewMember.astronaut.id)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 92, height: 64, alignment: .center)
+                                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 8).stroke(Color.secondary, lineWidth: 1))
                                 
-                                Text(crewMember.role)
-                                    .font(.subheadline)
-                                    .foregroundColor(.secondary)
+                                VStack(alignment: .leading) {
+                                    Text(crewMember.astronaut.name)
+                                        .foregroundColor(.primary)
+                                        .font(.headline)
+                                    
+                                    Text(crewMember.role)
+                                        .font(.subheadline)
+                                        .foregroundColor(.secondary)
+                                }
+                                
+                                Spacer()
                             }
-                            
-                            Spacer()
+                            .padding(.horizontal)
                         }
-                        .padding(.horizontal)
+                        
                     }
                     
                     Spacer(minLength: 25)
