@@ -12,6 +12,7 @@ struct MissionView: View {
     struct CrewMember {
         let role: String
         let astronaut: Astronaut
+        let missions: [Mission]
     }
     
     let mission: Mission
@@ -27,13 +28,17 @@ struct MissionView: View {
                         .frame(maxWidth: geo.size.width * 0.7)
                         .padding(.top)
                     
+                    Text(mission.launchDate?.formattedString() ?? "N/A")
+                        .foregroundColor(.primary)
+                        .font(.subheadline)
+                    
                     Text(self.mission.description)
-                        .minimumScaleFactor(0.5)
+                        .layoutPriority(1)
                         .padding()
                     
                     ForEach(self.astronauts, id: \.role) { crewMember in
                         NavigationLink(destination:
-                                        AstronautView(astronaut: crewMember.astronaut)) {
+                                        AstronautView(astronaut: crewMember.astronaut, missions: crewMember.missions)) {
                             
                             HStack {
                                 Image(crewMember.astronaut.id)
@@ -68,14 +73,21 @@ struct MissionView: View {
         .navigationBarTitle(Text(self.mission.displayName), displayMode: .inline)
     }
     
-    init(mission: Mission, astronauts: [Astronaut]) {
+    init(mission: Mission, allMissions: [Mission], astronauts: [Astronaut]) {
         self.mission = mission
 
         var matches = [CrewMember]()
 
         for member in mission.crew {
             if let match = astronauts.first(where: { $0.id == member.name }) {
-                matches.append(CrewMember(role: member.role, astronaut: match))
+                
+                let astronautMissions = allMissions.filter { (mission) -> Bool in
+                    mission.crew.contains { (role) -> Bool in
+                        role.name == match.id
+                    }
+                }
+                
+                matches.append(CrewMember(role: member.role, astronaut: match, missions: astronautMissions))
             } else {
                 fatalError("Missing \(member)")
             }
@@ -85,11 +97,19 @@ struct MissionView: View {
     }
 }
 
+private extension Date {
+    func formattedString() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        return dateFormatter.string(from: self)
+    }
+}
+
 struct MissionView_Previews: PreviewProvider {
     static let missions: [Mission] = Bundle.main.decode("missions.json")
     static let astronauts: [Astronaut] = Bundle.main.decode("astronauts.json")
 
     static var previews: some View {
-        MissionView(mission: missions[0], astronauts: astronauts)
+        MissionView(mission: missions[1], allMissions: [], astronauts: astronauts)
     }
 }

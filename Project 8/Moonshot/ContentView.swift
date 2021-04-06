@@ -67,6 +67,7 @@ struct NavigationLinkContentView: View {
 }
 
 struct ContentView: View {
+    @State private var showDate: Bool = true
     
     let astronauts: [Astronaut] = Bundle.main.decode("astronauts.json")
     let missions: [Mission] = Bundle.main.decode("missions.json")
@@ -74,7 +75,8 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(missions) { mission in
-                NavigationLink(destination: MissionView(mission: mission, astronauts: self.astronauts)) {
+                NavigationLink(destination: MissionView(mission: mission, allMissions: missions, astronauts: self.astronauts)) {
+                    
                     Image(mission.image)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -83,11 +85,22 @@ struct ContentView: View {
                     VStack(alignment: .leading) {
                         Text(mission.displayName)
                             .font(.headline)
-                        Text(mission.formattedLaunchDate)
+                        if showDate {
+                            Text(mission.formattedLaunchDate)
+                        } else {
+                            Text(mission.crew.reduce("") {
+                                $0.appending("\($1.name) ")
+                            })
+                        }
+                        
                     }
                 }
             }
+            .navigationBarItems(leading: Button("Switch", action: {
+                showDate.toggle()
+            }))
             .navigationBarTitle("Moonshot")
+            
         }
     }
 }
