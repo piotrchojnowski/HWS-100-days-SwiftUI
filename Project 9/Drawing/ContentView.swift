@@ -124,7 +124,7 @@ struct Flower: Shape {
     }
 }
 
-struct ContentView: View {
+struct FlowerContentView: View {
     @State private var petalOffset = -20.0
     @State private var petalWidth = 100.0
 
@@ -150,6 +150,15 @@ struct ContentView: View {
             Slider(value: $petalWidth, in: 0...100)
                 .padding(.horizontal)
         }
+    }
+}
+
+struct ContentView: View {
+    
+    var body: some View {
+        Capsule()
+            .strokeBorder(ImagePaint(image: Image("cupcakes"), scale: 0.3), lineWidth: 40)
+            .frame(width: 300, height: 200)
     }
 }
 
