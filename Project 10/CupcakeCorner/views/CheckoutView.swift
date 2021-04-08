@@ -11,7 +11,29 @@ struct CheckoutView: View {
     @ObservedObject var order: Order
     
     var body: some View {
-        Text("Hello, World!")
+        GeometryReader { geo in
+            ScrollView {
+                VStack {
+                    Image("cupcakes")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: geo.size.width)
+                    
+                    Text("Your total is $\(self.order.cost, specifier: "%.2f")")
+                        .font(.title)
+                        .padding(.bottom)
+                    
+                    Button("Place Order") {
+                        // place the order
+                    }
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+                }
+            }
+        }
+        .navigationBarTitle("Check out", displayMode: .inline)
     }
 }
 
