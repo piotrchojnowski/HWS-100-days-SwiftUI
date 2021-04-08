@@ -78,11 +78,19 @@ class Order: ObservableObject, Codable {
 }
 
 extension Order {
+    
+    func validateWhitespaces(with string: String) -> Bool {
+        return !string.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+    }
+    
     var hasValidAddress: Bool {
-        if name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty {
+        guard validateWhitespaces(with: streetAddress),
+              validateWhitespaces(with: name),
+              validateWhitespaces(with: city),
+              validateWhitespaces(with: zip) else {
             return false
         }
-
+        
         return true
     }
     

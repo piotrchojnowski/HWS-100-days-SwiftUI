@@ -56,6 +56,13 @@ struct CheckoutView: View {
         
         
         URLSession.shared.dataTask(with: request) { data, response, error in
+            
+            if let error = error {
+                self.confirmationMessage = "Something went wrong. \(error.localizedDescription)"
+                self.showingConfirmation = true
+                return
+            }
+            
             guard let data = data else {
                 print("No data in response: \(error?.localizedDescription ?? "Unknown error").")
                 return
