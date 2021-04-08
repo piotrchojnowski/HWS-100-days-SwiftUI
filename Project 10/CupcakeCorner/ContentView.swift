@@ -19,7 +19,7 @@ struct Result: Codable {
 }
 
 
-struct ContentView: View {
+struct DownloadingDataContentView: View {
     @State private var results = [Result]()
 
     var body: some View {
@@ -61,6 +61,42 @@ struct ContentView: View {
         }.resume()
     }
 }
+
+struct DisableContentView: View {
+    
+    @State private var username: String = ""
+    @State private var password: String = ""
+    
+    var signupButtonDisabled: Bool {
+        username.count < 5 || password.count < 3
+    }
+    
+    var body: some View {
+        Form {
+            Section {
+                TextField("Username", text: $username)
+                TextField("password", text: $password)
+            }
+            
+            Section {
+                Button("Create account") {
+                    print("creating account...")
+                }
+            }
+            .disabled(signupButtonDisabled)
+        }
+    }
+
+}
+
+struct ContentView: View {
+
+    var body: some View {
+        Text("hello")
+    }
+
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
