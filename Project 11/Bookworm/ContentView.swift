@@ -39,6 +39,7 @@ struct ContentView: View {
                         }
                     }
                 }
+                .onDelete(perform: deleteItems)
             }
             .navigationBarTitle("Bookworm")
             .navigationBarItems(trailing:
@@ -52,6 +53,22 @@ struct ContentView: View {
                 AddBookView()
                     .environment(\.managedObjectContext, moc)
             }
+        }
+    }
+    
+    func deleteItems(offsets: IndexSet) {
+        offsets.map {
+            books[$0]
+        }
+        .forEach {
+            moc.delete($0)
+        }
+        
+        do {
+            try moc.save()
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
     }
 }
