@@ -42,7 +42,7 @@ struct ContentView: View {
                 .onDelete(perform: deleteItems)
             }
             .navigationBarTitle("Bookworm")
-            .navigationBarItems(trailing:
+            .navigationBarItems(leading: EditButton(), trailing:
                                     Button(action: {
                                         showingAddScreen.toggle()
                                     }, label: {
