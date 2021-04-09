@@ -9,8 +9,13 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+    static private let frsDescriptors: [NSSortDescriptor] = [
+        NSSortDescriptor(keyPath: \Book.title, ascending: true),
+        NSSortDescriptor(keyPath: \Book.author, ascending: true)
+    ]
+    
     @Environment(\.managedObjectContext) private var moc
-    @FetchRequest(entity: Book.entity(), sortDescriptors: []) var books: FetchedResults<Book>
+    @FetchRequest(entity: Book.entity(), sortDescriptors: Self.frsDescriptors) var books: FetchedResults<Book>
     
     @State private var showingAddScreen = false
     
