@@ -11,27 +11,50 @@ import CoreData
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
+    @FetchRequest(entity: Wizard.entity(), sortDescriptors: []) var wizards: FetchedResults<Wizard>
+    
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
         animation: .default)
     private var items: FetchedResults<Item>
 
     var body: some View {
-        List {
-            ForEach(items) { item in
-                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+        
+        VStack {
+            List(wizards, id: \.self) { wizard in
+                Text(wizard.name ?? "Unknown")
             }
-            .onDelete(perform: deleteItems)
-        }
-        .toolbar {
-            #if os(iOS)
-            EditButton()
-            #endif
-
-            Button(action: addItem) {
-                Label("Add Item", systemImage: "plus")
+            
+            Button("Add") {
+                let wizard = Wizard(context: self.viewContext)
+                wizard.name = "Harry Potter"
+            }
+            
+            Button("Save") {
+                withAnimation {
+                    do {
+                        try self.viewContext.save()
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                }
             }
         }
+//        List {
+//            ForEach(items) { item in
+//                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+//            }
+//            .onDelete(perform: deleteItems)
+//        }
+//        .toolbar {
+//            #if os(iOS)
+//            EditButton()
+//            #endif
+//
+//            Button(action: addItem) {
+//                Label("Add Item", systemImage: "plus")
+//            }
+//        }
     }
 
     private func addItem() {
@@ -40,7 +63,12 @@ struct ContentView: View {
             newItem.timestamp = Date()
 
             do {
+                guard viewContext.hasChanges else {
+                    return
+                }
+                
                 try viewContext.save()
+                
             } catch {
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
@@ -55,7 +83,12 @@ struct ContentView: View {
             offsets.map { items[$0] }.forEach(viewContext.delete)
 
             do {
+                guard viewContext.hasChanges else {
+                    return
+                }
+                
                 try viewContext.save()
+                
             } catch {
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
