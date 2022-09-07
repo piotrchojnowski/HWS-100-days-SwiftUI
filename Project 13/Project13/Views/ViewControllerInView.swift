@@ -22,6 +22,15 @@ struct ViewControllerInView: View {
             Button("Select Image") {
                 showingImagePicker = true
             }
+            
+            Button("Save Image") {
+                guard let inputImage = inputImage else {
+                    return
+                }
+
+                let imageSaver = ImageSaver()
+                imageSaver.writeToPhotoAlbum(image: inputImage)
+            }
         }
         .sheet(isPresented: $showingImagePicker) {
             ImagePicker(image: $inputImage)
