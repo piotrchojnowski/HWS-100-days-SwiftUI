@@ -22,6 +22,8 @@ struct InstaFilterContentView: View {
     
     @State private var showingFilterSheet = false
     
+    @State private var processedImage: UIImage?
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -58,6 +60,7 @@ struct InstaFilterContentView: View {
                     Spacer()
                     
                     Button("Save", action: save)
+                        .disabled(image == nil)
                 }
             }
             .padding([.horizontal, .bottom])
@@ -74,6 +77,7 @@ struct InstaFilterContentView: View {
                 Button("Sepia Tone") { setFilter(CIFilter.sepiaTone()) }
                 Button("Unsharp Mask") { setFilter(CIFilter.unsharpMask()) }
                 Button("Vignette") { setFilter(CIFilter.vignette()) }
+                
                 Button("Cancel", role: .cancel) { }
             }
         }
@@ -90,7 +94,21 @@ struct InstaFilterContentView: View {
     }
     
     func save() {
+        guard let processedImage = processedImage else {
+            return
+        }
+
+        let saver = ImageSaver()
         
+        saver.successHandler = {
+            print("Success!")
+        }
+        
+        saver.errorHandler = {
+            print("Something went wrong: \($0.localizedDescription)")
+        }
+        
+        saver.writeToPhotoAlbum(image: processedImage)
     }
     
     func applyProcessing() {
@@ -115,6 +133,7 @@ struct InstaFilterContentView: View {
         if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) {
             let uiImage = UIImage(cgImage: cgimg)
             image = Image(uiImage: uiImage)
+            processedImage = uiImage
         }
     }
     

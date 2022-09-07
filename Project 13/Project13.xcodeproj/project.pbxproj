@@ -456,7 +456,7 @@
 				DEVELOPMENT_TEAM = 5XPP9GGY9N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Allow to save your filtered photo.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Allow to save your filtered photo into your Photo Album.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -486,7 +486,7 @@
 				DEVELOPMENT_TEAM = 5XPP9GGY9N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Allow to save your filtered photo.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Allow to save your filtered photo into your Photo Album.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
