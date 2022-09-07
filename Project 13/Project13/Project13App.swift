@@ -13,7 +13,7 @@ struct Project13App: App {
 
     var body: some Scene {
         WindowGroup {
-            ViewControllerInView()
+            InstaFilterContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

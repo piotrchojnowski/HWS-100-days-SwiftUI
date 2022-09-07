@@ -20,6 +20,7 @@
 		6B24F7A128C939EE003F4DB1 /* ViewControllerInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B24F7A028C939EE003F4DB1 /* ViewControllerInView.swift */; };
 		6B24F7A428C93ABA003F4DB1 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B24F7A328C93ABA003F4DB1 /* ImagePicker.swift */; };
 		6B52A38528C945B10047A93E /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B52A38428C945B10047A93E /* ImageSaver.swift */; };
+		6B52A38728C947000047A93E /* InstaFilterContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B52A38628C947000047A93E /* InstaFilterContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		6B24F7A028C939EE003F4DB1 /* ViewControllerInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInView.swift; sourceTree = "<group>"; };
 		6B24F7A328C93ABA003F4DB1 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		6B52A38428C945B10047A93E /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
+		6B52A38628C947000047A93E /* InstaFilterContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaFilterContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				6B24F77128C92252003F4DB1 /* ContentView.swift */,
 				6B24F79E28C9336B003F4DB1 /* InstafilterView.swift */,
 				6B24F7A028C939EE003F4DB1 /* ViewControllerInView.swift */,
+				6B52A38628C947000047A93E /* InstaFilterContentView.swift */,
 				6B24F7A328C93ABA003F4DB1 /* ImagePicker.swift */,
 				6B52A38428C945B10047A93E /* ImageSaver.swift */,
 			);
@@ -291,6 +294,7 @@
 				6B24F77028C92252003F4DB1 /* Project13App.swift in Sources */,
 				6B24F79F28C9336B003F4DB1 /* InstafilterView.swift in Sources */,
 				6B52A38528C945B10047A93E /* ImageSaver.swift in Sources */,
+				6B52A38728C947000047A93E /* InstaFilterContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
