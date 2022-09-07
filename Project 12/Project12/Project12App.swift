@@ -14,13 +14,13 @@ struct Project12App: App {
 
     private var moc: NSManagedObjectContext {
         let moc = persistenceController.container.viewContext
-        moc.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
+        moc.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         return moc
     }
     
     var body: some Scene {
         WindowGroup {
-            SingerView()
+            CandyBarsView()
                 .environment(\.managedObjectContext, moc)
         }
     }
