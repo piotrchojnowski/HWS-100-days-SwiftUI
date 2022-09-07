@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B24F75528C8E779003F4DB1 /* SingerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B24F75428C8E779003F4DB1 /* SingerView.swift */; };
+		6B24F75728C8E8A4003F4DB1 /* FilteredList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B24F75628C8E8A4003F4DB1 /* FilteredList.swift */; };
 		6B4983982621F8BD00B43C25 /* Project12App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4983972621F8BD00B43C25 /* Project12App.swift */; };
 		6B49839A2621F8BD00B43C25 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4983992621F8BD00B43C25 /* ContentView.swift */; };
 		6B49839C2621F8BF00B43C25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B49839B2621F8BF00B43C25 /* Assets.xcassets */; };
@@ -15,9 +17,13 @@
 		6B4983A42621F8BF00B43C25 /* Project12.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6B4983A22621F8BF00B43C25 /* Project12.xcdatamodeld */; };
 		6B4983AF26237CFD00B43C25 /* Movie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4983AD26237CFD00B43C25 /* Movie+CoreDataClass.swift */; };
 		6B4983B026237CFD00B43C25 /* Movie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4983AE26237CFD00B43C25 /* Movie+CoreDataProperties.swift */; };
+		6B69558A2623879D002B0905 /* Singer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6955882623879D002B0905 /* Singer+CoreDataClass.swift */; };
+		6B69558B2623879D002B0905 /* Singer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6955892623879D002B0905 /* Singer+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B24F75428C8E779003F4DB1 /* SingerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerView.swift; sourceTree = "<group>"; };
+		6B24F75628C8E8A4003F4DB1 /* FilteredList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredList.swift; sourceTree = "<group>"; };
 		6B4983942621F8BD00B43C25 /* Project12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project12.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B4983972621F8BD00B43C25 /* Project12App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project12App.swift; sourceTree = "<group>"; };
 		6B4983992621F8BD00B43C25 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -28,6 +34,8 @@
 		6B4983A52621F8BF00B43C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B4983AD26237CFD00B43C25 /* Movie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataClass.swift"; sourceTree = "<group>"; };
 		6B4983AE26237CFD00B43C25 /* Movie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6B6955882623879D002B0905 /* Singer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Singer+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		6B6955892623879D002B0905 /* Singer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Singer+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +68,14 @@
 		6B4983962621F8BD00B43C25 /* Project12 */ = {
 			isa = PBXGroup;
 			children = (
+				6B6955882623879D002B0905 /* Singer+CoreDataClass.swift */,
+				6B6955892623879D002B0905 /* Singer+CoreDataProperties.swift */,
 				6B4983AD26237CFD00B43C25 /* Movie+CoreDataClass.swift */,
 				6B4983AE26237CFD00B43C25 /* Movie+CoreDataProperties.swift */,
 				6B4983972621F8BD00B43C25 /* Project12App.swift */,
 				6B4983992621F8BD00B43C25 /* ContentView.swift */,
+				6B24F75428C8E779003F4DB1 /* SingerView.swift */,
+				6B24F75628C8E8A4003F4DB1 /* FilteredList.swift */,
 				6B49839B2621F8BF00B43C25 /* Assets.xcassets */,
 				6B4983A02621F8BF00B43C25 /* Persistence.swift */,
 				6B4983A52621F8BF00B43C25 /* Info.plist */,
@@ -150,10 +162,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B69558A2623879D002B0905 /* Singer+CoreDataClass.swift in Sources */,
 				6B4983A42621F8BF00B43C25 /* Project12.xcdatamodeld in Sources */,
+				6B24F75728C8E8A4003F4DB1 /* FilteredList.swift in Sources */,
 				6B4983A12621F8BF00B43C25 /* Persistence.swift in Sources */,
+				6B24F75528C8E779003F4DB1 /* SingerView.swift in Sources */,
 				6B49839A2621F8BD00B43C25 /* ContentView.swift in Sources */,
 				6B4983AF26237CFD00B43C25 /* Movie+CoreDataClass.swift in Sources */,
+				6B69558B2623879D002B0905 /* Singer+CoreDataProperties.swift in Sources */,
 				6B4983B026237CFD00B43C25 /* Movie+CoreDataProperties.swift in Sources */,
 				6B4983982621F8BD00B43C25 /* Project12App.swift in Sources */,
 			);

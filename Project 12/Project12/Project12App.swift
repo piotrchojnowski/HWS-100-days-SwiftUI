@@ -20,7 +20,7 @@ struct Project12App: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SingerView()
                 .environment(\.managedObjectContext, moc)
         }
     }
