@@ -11,6 +11,7 @@
 		6B71C26728CD2B6A002B13B8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B71C26628CD2B6A002B13B8 /* ContentView.swift */; };
 		6B71C26928CD2B6B002B13B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B71C26828CD2B6B002B13B8 /* Assets.xcassets */; };
 		6B71C26C28CD2B6B002B13B8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B71C26B28CD2B6B002B13B8 /* Preview Assets.xcassets */; };
+		6B8D3D5528CD2F1A004E81AA /* Lesson2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8D3D5428CD2F1A004E81AA /* Lesson2View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		6B71C26628CD2B6A002B13B8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6B71C26828CD2B6B002B13B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B71C26B28CD2B6B002B13B8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6B8D3D5428CD2F1A004E81AA /* Lesson2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson2View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				6B71C26428CD2B6A002B13B8 /* Project15App.swift */,
 				6B71C26628CD2B6A002B13B8 /* ContentView.swift */,
+				6B8D3D5428CD2F1A004E81AA /* Lesson2View.swift */,
 				6B71C26828CD2B6B002B13B8 /* Assets.xcassets */,
 				6B71C26A28CD2B6B002B13B8 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B8D3D5528CD2F1A004E81AA /* Lesson2View.swift in Sources */,
 				6B71C26728CD2B6A002B13B8 /* ContentView.swift in Sources */,
 				6B71C26528CD2B6A002B13B8 /* Project15App.swift in Sources */,
 			);
