@@ -14,10 +14,26 @@ struct BucketListView: View {
     
     @State private var locations = [Location]()
     
+    @State private var selectedPlace: Location?
+    
     var body: some View {
         ZStack {
             Map(coordinateRegion: $mapRegion, annotationItems: locations) { location in
-                MapMarker(coordinate: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude))
+                MapAnnotation(coordinate: location.coordinate) {
+                    VStack {
+                        Image(systemName: "star.circle")
+                            .resizable()
+                            .foregroundColor(.red)
+                            .frame(width: 44, height: 44)
+                            .background(.white)
+                            .clipShape(Circle())
+                        Text(location.name)
+                            .fixedSize() // fixes label size, not being truncated
+                    }
+                    .onTapGesture {
+                        selectedPlace = location
+                    }
+                }
             }
                 .ignoresSafeArea()
             
@@ -45,9 +61,19 @@ struct BucketListView: View {
                     .padding()
                     .background(.black.opacity(0.75))
                     .font(.title)
+                    .foregroundColor(.white)
                     .clipShape(Circle())
                     .padding(.trailing)
                 }
+            }
+        }
+        .sheet(item: $selectedPlace) { place in
+            LocationEditView(location: place) { newLocation in
+                guard let index = locations.firstIndex(of: place) else {
+                    return
+                }
+                
+                locations[index] = newLocation
             }
         }
     }

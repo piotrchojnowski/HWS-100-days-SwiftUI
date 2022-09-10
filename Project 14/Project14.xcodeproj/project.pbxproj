@@ -21,6 +21,7 @@
 		6B7069DD28CA3F3C00A4DC00 /* FaceIdTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7069DC28CA3F3C00A4DC00 /* FaceIdTestView.swift */; };
 		6B7069DF28CA421700A4DC00 /* BucketListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7069DE28CA421700A4DC00 /* BucketListView.swift */; };
 		6B7069E128CA433700A4DC00 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7069E028CA433700A4DC00 /* Location.swift */; };
+		6B7069E328CA479B00A4DC00 /* LocationEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7069E228CA479B00A4DC00 /* LocationEditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		6B7069DC28CA3F3C00A4DC00 /* FaceIdTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceIdTestView.swift; sourceTree = "<group>"; };
 		6B7069DE28CA421700A4DC00 /* BucketListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListView.swift; sourceTree = "<group>"; };
 		6B7069E028CA433700A4DC00 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		6B7069E228CA479B00A4DC00 /* LocationEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				6B7069DA28CA3D5100A4DC00 /* MapTestView.swift */,
 				6B7069DC28CA3F3C00A4DC00 /* FaceIdTestView.swift */,
 				6B7069DE28CA421700A4DC00 /* BucketListView.swift */,
+				6B7069E228CA479B00A4DC00 /* LocationEditView.swift */,
 				6B7069E028CA433700A4DC00 /* Location.swift */,
 				6B52A39828C9540E0047A93E /* Assets.xcassets */,
 				6B52A39D28C9540E0047A93E /* Persistence.swift */,
@@ -287,6 +290,7 @@
 				6B52A39528C9540C0047A93E /* Project14App.swift in Sources */,
 				6B7069DB28CA3D5100A4DC00 /* MapTestView.swift in Sources */,
 				6B7069DD28CA3F3C00A4DC00 /* FaceIdTestView.swift in Sources */,
+				6B7069E328CA479B00A4DC00 /* LocationEditView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
