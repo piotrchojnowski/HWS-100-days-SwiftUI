@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum LoadingState: CaseIterable {
+private enum LoadingState: CaseIterable {
     case loading, success, failed
 }
 
