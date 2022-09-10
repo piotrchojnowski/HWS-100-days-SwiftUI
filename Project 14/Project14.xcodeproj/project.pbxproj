@@ -23,6 +23,8 @@
 		6B7069E128CA433700A4DC00 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7069E028CA433700A4DC00 /* Location.swift */; };
 		6B7069E328CA479B00A4DC00 /* LocationEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7069E228CA479B00A4DC00 /* LocationEditView.swift */; };
 		6B7069E528CCF7C100A4DC00 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7069E428CCF7C100A4DC00 /* Result.swift */; };
+		6B7069E728CD001F00A4DC00 /* BucketListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7069E628CD001F00A4DC00 /* BucketListViewModel.swift */; };
+		6B7069E928CD151300A4DC00 /* FileManager-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7069E828CD151300A4DC00 /* FileManager-DocumentsDirectory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		6B7069E028CA433700A4DC00 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		6B7069E228CA479B00A4DC00 /* LocationEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEditView.swift; sourceTree = "<group>"; };
 		6B7069E428CCF7C100A4DC00 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		6B7069E628CD001F00A4DC00 /* BucketListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListViewModel.swift; sourceTree = "<group>"; };
+		6B7069E828CD151300A4DC00 /* FileManager-DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentsDirectory.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,8 @@
 				6B7069DA28CA3D5100A4DC00 /* MapTestView.swift */,
 				6B7069DC28CA3F3C00A4DC00 /* FaceIdTestView.swift */,
 				6B7069DE28CA421700A4DC00 /* BucketListView.swift */,
+				6B7069E628CD001F00A4DC00 /* BucketListViewModel.swift */,
+				6B7069E828CD151300A4DC00 /* FileManager-DocumentsDirectory.swift */,
 				6B7069E228CA479B00A4DC00 /* LocationEditView.swift */,
 				6B7069E028CA433700A4DC00 /* Location.swift */,
 				6B7069E428CCF7C100A4DC00 /* Result.swift */,
@@ -286,10 +292,12 @@
 			files = (
 				6B7069D928CA395100A4DC00 /* ConditionEnumView.swift in Sources */,
 				6B52A39E28C9540E0047A93E /* Persistence.swift in Sources */,
+				6B7069E728CD001F00A4DC00 /* BucketListViewModel.swift in Sources */,
 				6B52A39728C9540C0047A93E /* ContentView.swift in Sources */,
 				6B52A3A128C9540E0047A93E /* Project14.xcdatamodeld in Sources */,
 				6B7069E128CA433700A4DC00 /* Location.swift in Sources */,
 				6B7069DF28CA421700A4DC00 /* BucketListView.swift in Sources */,
+				6B7069E928CD151300A4DC00 /* FileManager-DocumentsDirectory.swift in Sources */,
 				6B52A39528C9540C0047A93E /* Project14App.swift in Sources */,
 				6B7069DB28CA3D5100A4DC00 /* MapTestView.swift in Sources */,
 				6B7069DD28CA3F3C00A4DC00 /* FaceIdTestView.swift in Sources */,
