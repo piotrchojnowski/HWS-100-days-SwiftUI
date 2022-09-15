@@ -14,6 +14,10 @@
 		6B19B7D528D1324800A60BC6 /* LocalNotificationsExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B19B7D428D1324800A60BC6 /* LocalNotificationsExampleView.swift */; };
 		6B19B7D828D13A3E00A60BC6 /* SamplePackage in Frameworks */ = {isa = PBXBuildFile; productRef = 6B19B7D728D13A3E00A60BC6 /* SamplePackage */; };
 		6B19B7DA28D13ACA00A60BC6 /* PackageExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B19B7D928D13ACA00A60BC6 /* PackageExampleView.swift */; };
+		6B19B7DD28D13BD400A60BC6 /* ProspectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B19B7DC28D13BD400A60BC6 /* ProspectsView.swift */; };
+		6B19B7DF28D13BDD00A60BC6 /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B19B7DE28D13BDD00A60BC6 /* MeView.swift */; };
+		6B19B7E128D13BFA00A60BC6 /* MainAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B19B7E028D13BFA00A60BC6 /* MainAppView.swift */; };
+		6B19B7E328D3750900A60BC6 /* Prospect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B19B7E228D3750900A60BC6 /* Prospect.swift */; };
 		6BD463F828CD348E0062934D /* Project16App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD463F728CD348E0062934D /* Project16App.swift */; };
 		6BD463FA28CD348E0062934D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD463F928CD348E0062934D /* ContentView.swift */; };
 		6BD463FC28CD348F0062934D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BD463FB28CD348F0062934D /* Assets.xcassets */; };
@@ -51,6 +55,10 @@
 		6B19B7D228D12A7500A60BC6 /* SwipeRowExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeRowExampleView.swift; sourceTree = "<group>"; };
 		6B19B7D428D1324800A60BC6 /* LocalNotificationsExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsExampleView.swift; sourceTree = "<group>"; };
 		6B19B7D928D13ACA00A60BC6 /* PackageExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageExampleView.swift; sourceTree = "<group>"; };
+		6B19B7DC28D13BD400A60BC6 /* ProspectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProspectsView.swift; sourceTree = "<group>"; };
+		6B19B7DE28D13BDD00A60BC6 /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
+		6B19B7E028D13BFA00A60BC6 /* MainAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppView.swift; sourceTree = "<group>"; };
+		6B19B7E228D3750900A60BC6 /* Prospect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prospect.swift; sourceTree = "<group>"; };
 		6BD463F428CD348E0062934D /* Project16.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project16.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BD463F728CD348E0062934D /* Project16App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project16App.swift; sourceTree = "<group>"; };
 		6BD463F928CD348E0062934D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -133,6 +141,10 @@
 			isa = PBXGroup;
 			children = (
 				6BD463F728CD348E0062934D /* Project16App.swift */,
+				6B19B7E028D13BFA00A60BC6 /* MainAppView.swift */,
+				6B19B7DC28D13BD400A60BC6 /* ProspectsView.swift */,
+				6B19B7E228D3750900A60BC6 /* Prospect.swift */,
+				6B19B7DE28D13BDD00A60BC6 /* MeView.swift */,
 				6B19B7DB28D13B7E00A60BC6 /* examples */,
 				6BD463FB28CD348F0062934D /* Assets.xcassets */,
 				6BD4640028CD348F0062934D /* Persistence.swift */,
@@ -303,12 +315,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B19B7DF28D13BDD00A60BC6 /* MeView.swift in Sources */,
+				6B19B7E128D13BFA00A60BC6 /* MainAppView.swift in Sources */,
 				6B19B7CF28D1275400A60BC6 /* ImageInterpolationExampleView.swift in Sources */,
+				6B19B7DD28D13BD400A60BC6 /* ProspectsView.swift in Sources */,
 				6B19B7D128D1287E00A60BC6 /* ContextMenuExampleView.swift in Sources */,
 				6B19B7D528D1324800A60BC6 /* LocalNotificationsExampleView.swift in Sources */,
 				6BD4640428CD348F0062934D /* Project16.xcdatamodeld in Sources */,
 				6BD4640128CD348F0062934D /* Persistence.swift in Sources */,
 				6B19B7CD28D1249C00A60BC6 /* ResultExampleView.swift in Sources */,
+				6B19B7E328D3750900A60BC6 /* Prospect.swift in Sources */,
 				6BD4642728CFE31B0062934D /* TabsExampleView.swift in Sources */,
 				6BD463FA28CD348E0062934D /* ContentView.swift in Sources */,
 				6B19B7D328D12A7500A60BC6 /* SwipeRowExampleView.swift in Sources */,

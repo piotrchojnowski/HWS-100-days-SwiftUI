@@ -13,7 +13,7 @@ struct Project16App: App {
 
     var body: some Scene {
         WindowGroup {
-            LocalNotificationsExampleView()
+            MainAppView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
