@@ -4,7 +4,7 @@
 //
 //  Created by Piotr Chojnowski on 14/09/2022.
 //
-
+import CodeScanner
 import SwiftUI
 
 struct ProspectsView: View {
@@ -13,6 +13,7 @@ struct ProspectsView: View {
     }
     
     @EnvironmentObject var prospects: Prospects
+    @State private var isShowingScanner = false
     let filter: FilterType
     
     var body: some View {
@@ -28,17 +29,19 @@ struct ProspectsView: View {
                     }
                 }
             }
-                .navigationTitle(title)
-                .toolbar {
-                    Button {
-                        let prospect = Prospect()
-                        prospect.name = "Piotr Chojnowski"
-                        prospect.emailAddress = "piotr@mail.com"
-                        prospects.people.append(prospect)
-                    } label: {
-                        Label("Scan", systemImage: "qrcode.viewfinder")
-                    }
+            .navigationTitle(title)
+            .toolbar {
+                Button {
+                    isShowingScanner = true
+                } label: {
+                    Label("Scan", systemImage: "qrcode.viewfinder")
                 }
+            }
+            .sheet(isPresented: $isShowingScanner) {
+                CodeScannerView(codeTypes: [.qr],
+                                simulatedData: "Piotr Chojnwowski\npiotr@piotr.com",
+                                completion: handleScan)
+            }
         }
     }
     
@@ -61,6 +64,24 @@ struct ProspectsView: View {
             return prospects.people.filter { $0.isContacted }
         case .uncontacted:
             return prospects.people.filter { $0.isContacted == false }
+        }
+    }
+    
+    func handleScan(result: Result<ScanResult, ScanError>) {
+        isShowingScanner = false
+        
+        switch result {
+        case .success(let success):
+            let details = success.string.components(separatedBy: "\n")
+            guard details.count == 2 else { return }
+            
+            let person = Prospect()
+            person.name = details[0]
+            person.emailAddress = details[1]
+            prospects.people.append(person)
+            
+        case .failure(let failure):
+            print("scanning failed: \(failure.localizedDescription)")
         }
     }
 }
