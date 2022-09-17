@@ -27,6 +27,23 @@ struct ProspectsView: View {
                         Text(prospect.emailAddress)
                             .font(.subheadline)
                     }
+                    .swipeActions {
+                        if prospect.isContacted {
+                            Button {
+                                prospects.toggle(prospect)
+                            } label: {
+                                Label("Mark Uncontacted", systemImage: "person.crop.circle.badge.xmark")
+                            }
+                            .tint(.blue)
+                        } else {
+                            Button {
+                                prospects.toggle(prospect)
+                            } label: {
+                                Label("Mark Contacted", systemImage: "person.crop.circle.badge.checkmark")
+                            }
+                            .tint(.green)
+                        }
+                    }
                 }
             }
             .navigationTitle(title)
@@ -78,7 +95,7 @@ struct ProspectsView: View {
             let person = Prospect()
             person.name = details[0]
             person.emailAddress = details[1]
-            prospects.people.append(person)
+            prospects.add(person)
             
         case .failure(let failure):
             print("scanning failed: \(failure.localizedDescription)")
