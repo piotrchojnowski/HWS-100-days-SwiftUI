@@ -11,7 +11,7 @@ import SwiftUI
 struct Project18App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ScrollViewGeoExampleView()
         }
     }
 }
