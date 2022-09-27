@@ -11,6 +11,13 @@
 		6BDB13F128E245C8002BCE02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDB13F028E245C8002BCE02 /* ContentView.swift */; };
 		6BDB13F328E245CA002BCE02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BDB13F228E245CA002BCE02 /* Assets.xcassets */; };
 		6BDB13F628E245CA002BCE02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BDB13F528E245CA002BCE02 /* Preview Assets.xcassets */; };
+		6BDB13FD28E24ABA002BCE02 /* AlertSheetExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDB13FC28E24ABA002BCE02 /* AlertSheetExampleView.swift */; };
+		6BDB13FF28E24FB4002BCE02 /* GroupExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDB13FE28E24FB3002BCE02 /* GroupExampleView.swift */; };
+		6BDB140128E25181002BCE02 /* SearchableExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDB140028E25181002BCE02 /* SearchableExampleView.swift */; };
+		6BDB140328E252B8002BCE02 /* Resort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDB140228E252B8002BCE02 /* Resort.swift */; };
+		6BDB140528E252EA002BCE02 /* resorts.json in Resources */ = {isa = PBXBuildFile; fileRef = 6BDB140428E252EA002BCE02 /* resorts.json */; };
+		6BDB140728E2532F002BCE02 /* Bundle-decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDB140628E2532F002BCE02 /* Bundle-decode.swift */; };
+		6BDB140928E391C8002BCE02 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDB140828E391C8002BCE02 /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,13 @@
 		6BDB13F028E245C8002BCE02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6BDB13F228E245CA002BCE02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BDB13F528E245CA002BCE02 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6BDB13FC28E24ABA002BCE02 /* AlertSheetExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSheetExampleView.swift; sourceTree = "<group>"; };
+		6BDB13FE28E24FB3002BCE02 /* GroupExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupExampleView.swift; sourceTree = "<group>"; };
+		6BDB140028E25181002BCE02 /* SearchableExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableExampleView.swift; sourceTree = "<group>"; };
+		6BDB140228E252B8002BCE02 /* Resort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resort.swift; sourceTree = "<group>"; };
+		6BDB140428E252EA002BCE02 /* resorts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = resorts.json; sourceTree = "<group>"; };
+		6BDB140628E2532F002BCE02 /* Bundle-decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-decode.swift"; sourceTree = "<group>"; };
+		6BDB140828E391C8002BCE02 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +67,13 @@
 			children = (
 				6BDB13EE28E245C8002BCE02 /* Project19App.swift */,
 				6BDB13F028E245C8002BCE02 /* ContentView.swift */,
+				6BDB13FC28E24ABA002BCE02 /* AlertSheetExampleView.swift */,
+				6BDB140828E391C8002BCE02 /* WelcomeView.swift */,
+				6BDB13FE28E24FB3002BCE02 /* GroupExampleView.swift */,
+				6BDB140028E25181002BCE02 /* SearchableExampleView.swift */,
+				6BDB140628E2532F002BCE02 /* Bundle-decode.swift */,
+				6BDB140228E252B8002BCE02 /* Resort.swift */,
+				6BDB140428E252EA002BCE02 /* resorts.json */,
 				6BDB13F228E245CA002BCE02 /* Assets.xcassets */,
 				6BDB13F428E245CA002BCE02 /* Preview Content */,
 			);
@@ -125,6 +146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BDB140528E252EA002BCE02 /* resorts.json in Resources */,
 				6BDB13F628E245CA002BCE02 /* Preview Assets.xcassets in Resources */,
 				6BDB13F328E245CA002BCE02 /* Assets.xcassets in Resources */,
 			);
@@ -137,7 +159,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BDB13FD28E24ABA002BCE02 /* AlertSheetExampleView.swift in Sources */,
+				6BDB140128E25181002BCE02 /* SearchableExampleView.swift in Sources */,
+				6BDB140728E2532F002BCE02 /* Bundle-decode.swift in Sources */,
+				6BDB140928E391C8002BCE02 /* WelcomeView.swift in Sources */,
+				6BDB13FF28E24FB4002BCE02 /* GroupExampleView.swift in Sources */,
 				6BDB13F128E245C8002BCE02 /* ContentView.swift in Sources */,
+				6BDB140328E252B8002BCE02 /* Resort.swift in Sources */,
 				6BDB13EF28E245C8002BCE02 /* Project19App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
