@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6B7209B328E3A8B400E6F1D8 /* Facility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7209B228E3A8B400E6F1D8 /* Facility.swift */; };
+		6B7209B528E3AC0F00E6F1D8 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7209B428E3AC0F00E6F1D8 /* Favorites.swift */; };
 		6BAC30FF28E394E900A60085 /* ResortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC30FE28E394E900A60085 /* ResortView.swift */; };
 		6BAC310128E395A900A60085 /* SkiDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC310028E395A900A60085 /* SkiDetailsView.swift */; };
 		6BAC310328E3964F00A60085 /* ResortDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC310228E3964F00A60085 /* ResortDetailsView.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		6B7209B228E3A8B400E6F1D8 /* Facility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facility.swift; sourceTree = "<group>"; };
+		6B7209B428E3AC0F00E6F1D8 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		6BAC30FE28E394E900A60085 /* ResortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortView.swift; sourceTree = "<group>"; };
 		6BAC310028E395A900A60085 /* SkiDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiDetailsView.swift; sourceTree = "<group>"; };
 		6BAC310228E3964F00A60085 /* ResortDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortDetailsView.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				6BDB13FE28E24FB3002BCE02 /* GroupExampleView.swift */,
 				6BDB140028E25181002BCE02 /* SearchableExampleView.swift */,
 				6BDB140628E2532F002BCE02 /* Bundle-decode.swift */,
+				6B7209B428E3AC0F00E6F1D8 /* Favorites.swift */,
 				6B7209B228E3A8B400E6F1D8 /* Facility.swift */,
 				6BDB140228E252B8002BCE02 /* Resort.swift */,
 				6BDB140428E252EA002BCE02 /* resorts.json */,
@@ -183,6 +186,7 @@
 				6BDB13F128E245C8002BCE02 /* ContentView.swift in Sources */,
 				6BDB140328E252B8002BCE02 /* Resort.swift in Sources */,
 				6BDB13EF28E245C8002BCE02 /* Project19App.swift in Sources */,
+				6B7209B528E3AC0F00E6F1D8 /* Favorites.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
